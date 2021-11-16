@@ -1,0 +1,6 @@
+﻿CREATE TABLE IF NOT EXISTS Enderecos(
+    enderecoID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    logradouro VARCHAR(150) NOT NULL,
+    numero INT NOT NULL,
+    dono INT NOT NULL,
+    CONSTRAINT fk_pessoa FOREIGN KEY (dono) REFERENCES Pessoas(pessoaID));
